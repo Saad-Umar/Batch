@@ -6,6 +6,10 @@ public class Batch {
         return dispatchGroup.count
     }
     
+    public init() {
+        
+    }
+    
 }
 
 public extension Batch {
