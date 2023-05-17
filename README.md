@@ -16,7 +16,7 @@ dispatchGroupForAPISet2.leave()
 
 YUCK!  
 
-Simply use the logic you are already accustomed with, the indexed-based access logic! Use Batch so:  
+Simply use the logic you are already accustomed with, the indexed-based access logic! it will automatically create a new dispatchGroup internally and manage it for you so you dont have to worry, consider Batch a higher level api. Use Batch so:  
 
 var batch = Batch()  
 
