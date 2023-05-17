@@ -1,6 +1,30 @@
 # Batch
 
-Use DispatchGroups the painless way!
+Does making DispatchGroups in iOS for various purposes all at once and managing them annoy you? Dont worry, you're covered. Meet Batch, a DispatchGroup collection but better! You dont have to worry about creating DispatchGroups over and over like:
+
+var dispatchGroupForAPISet1 = DispatchGroup()
+var dispatchGroupForAPISet2 = DispatchGroup()
+var dispatchGroupForAPISet3 = DispatchGroup()
+
+then at some point:
+
+dispatchGroupForAPISet1.enter()
+dispatchGroupForAPISet2.enter()
+.....
+
+dispatchGroupForAPISet2.leave()
+
+YUCK!
+
+Simply use the logic you are already accustomed with, the indexed-based access logic! Use Batch so:
+
+var batch = Batch()
+
+batch[0].enter()
+batch[0].leave()
+batch[0].notify(queue: .main, execute: {
+          print("work done!")
+})
 
 ## Installation
 
