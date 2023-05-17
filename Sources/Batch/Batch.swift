@@ -1,6 +1,6 @@
 import Foundation
 
-class Batch {
+public class Batch {
     private var dispatchGroup = Array<DispatchGroup>()
     var count: Int {
         return dispatchGroup.count
@@ -8,7 +8,7 @@ class Batch {
     
 }
 
-extension Batch {
+public extension Batch {
     subscript(_ index: Int) -> DispatchGroup {
         var dispatchGroup: DispatchGroup!
         
