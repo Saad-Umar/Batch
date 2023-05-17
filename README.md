@@ -9,6 +9,8 @@ Simply use SPM.
 
 ## Usage
 ```
+import Batch
+
 struct TestView: View {
     var batch = Batch()
     @State var incrementer = 0
