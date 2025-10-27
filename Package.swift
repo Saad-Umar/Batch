@@ -4,25 +4,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "Batch",
+    name: "VoiceTranslator",
+    platforms: [
+        .iOS(.v15) // Required for Translation framework
+    ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Batch",
-            targets: ["Batch"]),
+            name: "VoiceTranslator",
+            targets: ["VoiceTranslator"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        // No external dependencies needed - using Apple's built-in frameworks
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Batch",
+            name: "VoiceTranslator",
             dependencies: []),
         .testTarget(
-            name: "BatchTests",
-            dependencies: ["Batch"]),
+            name: "VoiceTranslatorTests",
+            dependencies: ["VoiceTranslator"]),
     ]
 )
